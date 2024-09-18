@@ -7,7 +7,11 @@
 
 body {
   font-family: $font;
-  // color: $color-light;
+  color: $color-dark;
+  background-color: #ffffff;
+  background-image: radial-gradient(#e4e3ee 0.8px, transparent 0.8px), radial-gradient(#e4e3ee 0.8px, #ffffff 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
   overflow: hidden;
 }
 
