@@ -1,13 +1,13 @@
 .data-wrap {
-  // display: flex;
   margin: 0 auto;
   padding: 0 30px;
   width: 100%;
   max-width: 450px;
-  height: 700px;
+  height: 650px;
   background-color: $color-light;
   border: 1px solid rgba($color-dark, .1);
   border-radius: 7px;
+  box-shadow: 0 0 20px -10px rgba($color-accent, .1);
 }
 
 .data-info {
@@ -23,7 +23,7 @@
   height: 100px;
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba($color-accent, 1);
-	animation: pulse 3s ease-out infinite;
+  animation: pulse 3s ease-out infinite;
 
   @keyframes pulse {
     0% {
@@ -31,7 +31,7 @@
     }
 
     50% {
-      box-shadow: 0 0 0 15px rgba($color-accent, 0);
+      box-shadow: 0 0 0 12px rgba($color-accent, 0);
     }
 
     100% {
@@ -94,34 +94,45 @@
   cursor: pointer;
 
   &:hover {
-    // background: linear-gradient(90deg, rgba(197, 151, 255, .1) 0%, rgba(164, 130, 255, .1) 100%);
     background-color: rgba($color-accent, .1);
+  }
+
+  &.active {
+    background-color: rgba($color-accent, .3);
   }
 }
 
-.data-social-list {
-  // display: flex;
+.data-social-list,
+.data-dev-list,
+.data-photography-list {
+  display: none;
   padding: 10px 0;
   list-style: none;
+
+  &.active {
+    display: block;
+  }
 }
 
-.data-social-item {}
-
-.data-social-link {
+.data-social-link,
+.data-dev-link,
+.data-photography-link {
   display: flex;
   align-items: center;
   padding: 15px;
   text-decoration: none;
 
   &:hover {
-    // background: linear-gradient(90deg, rgba(197, 151, 255, .3) 0%, rgba(164, 130, 255, .3) 100%);
     background-color: rgba($color-accent, .3);
     border-radius: 10px;
   }
 }
 
-.data-social-icon {
+.data-social-icon,
+.data-dev-icon,
+.data-photography-icon {
   display: block;
+  flex-basis: 10%;
   margin-right: 20px;
   width: 20px;
   height: 20px;
@@ -130,19 +141,24 @@
   background-size: contain;
 }
 
-.data-social-info {}
+.data-social-info,
+.data-dev-info,
+.data-photography-info {
+  flex-basis: 90%;
+}
 
-.data-social-title {
+.data-social-title,
+.data-dev-title,
+.data-photography-title {
   font-size: 14px;
+  line-height: 21px;
   color: $color-dark;
 }
 
-.data-social-desc {
+.data-social-desc,
+.data-dev-desc,
+.data-photography-desc {
   font-size: 13px;
+  line-height: 19px;
   color: rgba($color-dark, .7);
-}
-
-.data-tabs-social.active {
-  // background: linear-gradient(90deg, rgba(197, 151, 255, .3) 0%, rgba(164, 130, 255, .3) 100%);
-  background-color: rgba($color-accent, .3);
 }
