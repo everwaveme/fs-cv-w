@@ -106,11 +106,30 @@
 .data-dev-list,
 .data-photography-list {
   display: none;
-  padding: 10px 0;
+  margin: 20px 0;
   list-style: none;
 
   &.active {
     display: block;
+  }
+}
+
+.data-dev-list,
+.data-photography-list {
+  height: 300px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba($color-accent, .2);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba($color-accent, .3);
   }
 }
 
@@ -126,6 +145,11 @@
     background-color: rgba($color-accent, .3);
     border-radius: 10px;
   }
+}
+
+.data-dev-link,
+.data-photography-link {
+  margin-right: 1px;
 }
 
 .data-social-icon,
